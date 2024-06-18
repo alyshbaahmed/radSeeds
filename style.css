@@ -1,0 +1,293 @@
+body{
+  background-color: #FFFDEB;
+  margin:0px;
+}
+
+/* start of nav bar*/
+
+.navButtons a:link{
+  color: #32502E;
+  text-decoration: none;
+}
+
+.radSeeds a:link{
+  color: #32502E;
+  text-decoration: none;
+}
+
+a:visited{
+  color: #32502E;
+}
+
+a:hover{
+  color: #406343;
+}
+
+.navbar{
+  display: flex;
+  flex-direction:row;
+  background-color:#F3EFCC;
+  height: 100%; 
+  width:100%;
+
+}
+
+.navbarHome{
+  display: flex;
+  flex-direction:row;
+  background-color:#F3EFCC;
+  height: 100%; 
+  width:100%;
+}
+.navbarButtons{
+  display: flex;
+  flex-direction:row;
+  justify-content: end;
+  background-color:#F3EFCC;
+  height: 100%; 
+  width:100%;
+}
+
+
+.radSeeds {
+  border: 1px;
+  border-radius:1px;
+  padding-left: 15px;
+  background-color:#F3EFCC;
+  font-family: 'Spectral', serif; 
+  font-size:40px;
+}
+
+.navButtons:hover {
+  color:#406343;
+  background-color:#F3EFCC;
+  cursor: pointer;
+}
+
+.navButtons {
+  font-size: 20px;
+  background-color:#F3EFCC;
+  border:none;
+  margin-top: 30px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: flex-end;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.home{
+  font-size: 20px;
+  background-color:#F3EFCC;
+  border:none;
+  padding-left: 15px;
+  display: flex;
+  justify-content: flex-end;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.make-a-seed-bomb{
+  font-size: 20px;
+  background-color:#F3EFCC;
+  border:none;
+  padding-left: 15px;
+  display: flex;
+  justify-content: flex-end;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.get-involved{
+  font-size: 20px;
+  background-color:#F3EFCC;
+  border:none;
+  padding-left: 15px;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.the-seed-map{
+  font-size: 20px;
+  background-color:#F3EFCC;
+  border:none;
+  padding-left: 15px;
+  display: flex;
+  justify-content: flex-end;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/*end of nav bar*/
+
+.homePlantImg{
+  position: absolute;
+  width: 275px;
+  height: 355.14px;
+  display: flex;
+  justify-content: center;
+  padding-top:10px;
+}
+
+.homeImgs{
+  position: absolute;
+  width: 275px;
+  height: 355.14px;
+  display: flex;
+  justify-content: center;
+  padding-top:30px;
+ }
+
+ .homeImgs2{
+  position: absolute;
+  width: 350px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  padding-top:40px;
+ }
+
+ .homeText{
+  font-size: 20px;
+  border:none;
+  padding: 15px;
+  font-family: 'Montserrat', sans-serif;
+ }
+
+.title{
+  font-size: 30px;
+  border:none;
+  padding: 15px; 
+  font-family: 'Montserrat', sans-serif;   
+}
+
+
+
+.homeSections{
+ padding-top: 100px;
+ padding-bottom:100px;
+ display: flex;
+ justify-content: space-evenly;
+ //it is too late rn, im gonna figure this out in the morning haha
+}
+
+ a#nav {
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+.mapframe{
+  position: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.seedText{
+  font-size: 15px;
+  border:none;
+  margin-left: 25px;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+
+.seedImage{
+  position: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
+}
+
+h3{
+  color: green;
+  text-align: center;
+}
+
+h4{
+    margin-left: 15px;
+}
+
+.column{
+  column-count: 2;
+}
+
+a:hover{
+  color: #548258;
+}
+
+.resources{
+  display: flex;
+  justify-content: center;
+  flex-basis: 100%;
+}
+
+.aResource{
+  padding:10px;
+  width:33%;
+}
+
+.getInv{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+.homePts{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding:100px;
+}
+
+.homePt1{
+  width: 50%;
+  margin-left: 150px;
+}
+
+.homePt2{
+  width: 50%;
+}
+
+.us{
+  display: flex;
+  justify-content: center;
+  padding:20px;
+}
+
+.eachUs{
+  width:25%;
+}
+
+footer{
+  float: left;
+  font-family: 'Montserrat', sans-serif;
+  text-align:center;
+  padding-top:30px;
+  padding-bottom:10px;
+  width:100%;
+  background-color: #32502E;
+}
+
+footer a{
+  color:#FFFDEB; 
+  text-align:center;
+  margin-left:30px;
+  font-size: 30px;
+  margin-right:30px;
+  -moz-transition: all .15s ease-in;
+  -o-transition: all .15s ease-in;
+  -webkit-transition: all .15s ease-in;
+  transition: all .15s ease-in;
+}
+
+footer a:hover{
+  color:#B3CB7F;
+}
+
+footer h6{
+  color:#FFFDEB; 
+  text-align:center;
+  margin-left:30px;
+  display: block;
+  margin-right:30px;
+}

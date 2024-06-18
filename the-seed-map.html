@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>radSeeds | The Seed Map </title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <style type="text/css">
+      /* Set the size of the div element that contains the map */
+      #map {
+        height: 640px;
+        /* The height is 400 pixels */
+        width: 100%;
+        /* The width is the width of the web page */
+      }
+    </style>
+    <script>
+      // Initialize and add the map
+      function initMap() {
+        
+        // The location of Uluru
+        var ny = {lat: 40.730610, lng: -73.935242 };
+        
+        // The map, centered at Uluru
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 10,
+          center: ny,
+        });
+        
+        var leaf = {
+          url: "https://cdn.glitch.me/de1fa7f3-e4fc-45cf-9266-d43b5af34ecf%2Fleaf.png?v=1634439304709",
+          scaledSize: new google.maps.Size(30, 30),
+        };
+        
+         
+        var marker = new google.maps.Marker({
+          position: ny,
+          map: map,
+          icon: leaf,
+        });
+        
+        var infoWindow = new google.maps.InfoWindow({
+          content: '<h1> new york </h1?'
+        });
+        
+        marker.addListener('click', function(){
+          infoWindow.open(map,marker);
+        });
+      
+        google.maps.event.addListener(map, 'click',
+          function(event){
+            addMarker({coords:event.latLng});
+        });
+        
+        addMarker({coords: ny});
+        
+          function addMarker(props) {
+            var marker = new google.maps.Marker({
+            position: props.coords,
+            map: map,
+            icon: leaf,
+            });
+        }
+        map.data.loadGeoJson(
+        "https://cdn.glitch.me/de1fa7f3-e4fc-45cf-9266-d43b5af34ecf%2FNYBronx1938.geojson?v=1634446316083"
+        );
+        map.data.loadGeoJson(
+        "https://cdn.glitch.me/de1fa7f3-e4fc-45cf-9266-d43b5af34ecf%2FNYBrooklyn1938.geojson?v=1634446095999"
+        );
+        map.data.loadGeoJson(
+        "https://cdn.glitch.me/de1fa7f3-e4fc-45cf-9266-d43b5af34ecf%2FNYManhattan1937.geojson?v=1634479177720"
+        );
+        /*map.data.loadGeoJson(
+        "https://cdn.glitch.me/de1fa7f3-e4fc-45cf-9266-d43b5af34ecf%2FNYBronx1938.geojson?v=1634446316083"
+        );*/
+        
+      }
+      </script>
+  </head>
+  <body>
+    
+      <div class = "navbar">
+        <div class="navbarHome">
+
+          <!-----<img src="paste link here"class="logo"> for logo if we have one-------> 
+
+          <h1 class="radSeeds"> <a href= "/index.html" id = "nav"> radSeeds </a></h1>
+          
+        </div>
+        
+        <div class="navButtons">
+
+          
+          <button class="make-a-seed-bomb"> <a href = "/make-a-seed-bomb.html" > make a seed bomb </a> </button>
+          <button class="get-involved">  <a href = "/get-involved.html" > get involved </a> </button>
+          <button class="the-seed-map"> <a href = "/the-seed-map.html" style="color:#B3CB7F;"> the seed map </a> </button>
+        
+        </div>
+      </div>
+      <div class = "mapframe">
+        <p class = "title" style="text-align:center; font-family: 'Balsamiq Sans', cursive; font-size:40px; color:#32502E; margin:0; " > check out the Seed Map. </p>
+        <p class="homeText" style="text-align:center;">Today, seed bombs gardening are popular around the world, and especially in places where there are high vacancy rates and no formal greening programs. For people who don’t like to get their hands dirty, seed bombs are now available for purchase in a wide variety of seed mixes. The California-based Greenaid project even stocks seed bombs in vending machines that are distributed throughout the U.S.
+         In New York there's only one: 133 Jay StSchenectady, NY 12305</p>
+        <iframe src="https://www.google.com/maps/d/embed?mid=1kt_ZMuOU8EacZsYwyZ6ehzt9pIo" width="640" height="480"></iframe>
+      </div>
+      <!--The div element for the map -->
+      <h3 class = "title" style="text-align:center; font-family: 'Balsamiq Sans', cursive; font-size:40px; color:#32502E; margin:0; " >my personalized map</h3>
+       <p class="homeText" style="text-align:center;">For active seed bombers, this map allows you to pin point areas you find could use a seed bomb around your city such as a empty lot. This will then allow other seedbombers to "bomb" these areas or can allow you to keep track of areas for later seed bombing!</p>
+    <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkc6J_yjmU3t7gdAQ028fOnYFQGIcJ2g0&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+
+    <script src="script.js"></script>
+  </body>
+
+<footer>
+      <a style="color:#F3EFCC" href="index.html">home</a>
+      <a style="color:#F3EFCC" href="make-a-seed-bomb.html"> make a seed bomb </a>
+      <a style="color:#F3EFCC" href="get-involved.html"> get involved </a>
+      <a style="color:#F3EFCC" href="the-seed-map.html" >the seed map </a>
+
+      <br /><br />
+      <h6>made on repl.it, designed via figma, API from Google Maps. 2021 </h6>
+  </footer>
+
+</html>
